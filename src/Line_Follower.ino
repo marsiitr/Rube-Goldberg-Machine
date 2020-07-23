@@ -5,9 +5,9 @@ int baseSpeed=50;
 int maxSpeed=75;
 int serialEn=2;
 int pwm1=6;                     
-int dir1=12;                  //Motor 1 direction
+int dir1=12;                  // Motor 1 direction
 int pwm2=5;
-int dir2=3;                   //Motor 2 direction
+int dir2=3;                   // Motor 2 direction
 int base=35;
 int pos;                      // Position detected by the LSA
 

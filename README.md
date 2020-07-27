@@ -1,7 +1,10 @@
 # Rube Goldberg Machine (Srishti 2020)
 
-![LED](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/LED_Matrix.jpg)
-*LED Matrix*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/LED_Matrix.jpg" alt="LED Matrix">
+  <i>LED Matrix</i>
+</p>
+
 
 ## Abstract
 A Rube Goldberg Machine is a contraption intentionally designed to perform a simple task in an indirect and overly complicated way. The aim of this project is to depict the life of a college student through a similar complex assembly of mechanical and electronic components linked with each other creating a metaphor between humans and machines.
@@ -10,9 +13,10 @@ A Rube Goldberg Machine is a contraption intentionally designed to perform a sim
 College life may seem to be full of excitement and surprises for a layman, but little do he know of the struggles that the student had to face to reach that milestone and the difficulties that are masked by the brand college name. So our team of 5 freshers decided to cover the important moments of the journey beginning with exams to the major events of 1st year and what we think is to come next for us. We attempt to display it in a visually appealing format making use of our mechanical and electronics expertise.
 
 ## Workflow
-![Flowchart](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Flowchart.png)
-
-*Schematic Flow Chart of the Machine*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Flowchart.png" alt="Flowchart">
+  <i>Schematic Flow Chart of the Machine</i>
+</p>
 
 * The entire project is divided into 8 major elements depicting a distinct phase in the life of a student who is represented by spherical balls of different sizes. 
 
@@ -39,24 +43,27 @@ The following steps help one understand the journey by providing a mechanical de
 * **Tower of Exams:** A vertical assembly of MDF towers inter-connected via loophole paths describes the difficult journey before getting into IIT.
 * A smooth MDF path transitions into the LDR Gate triggering the **Line-following car**. Running on a parallel track is another MDF platform taking each ball to the chain lift.
 
-![LineFollowingCar](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Following_Car.png)
-
-*Line Following Car*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Following_Car.png" alt="Line Following Car">
+  <i>Line Following Car</i>
+</p>
 
 * Line-follower traverses through the loop and then triggers the Biped Bot.
 * **Biped bot** is a working prototype of a two-legged robot built with an assembly of 3 acrylic pulleys linked with elastic bands and 6mm steel rods, propelled by using a simple DC motor. It mounts an Arduino Uno on one side used to control the motor via a motor driver.
 
-![Biped](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Biped_Cad.PNG)
-
-*Biped Bot*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Biped_Cad.PNG" alt="Biped Bot">
+  <i>Biped Bot</i>
+</p>
 
 * Biped Bot passes through the LDR gate triggers the LED Matrix.
 * Meanwhile, the balls approach the **Group Recruitment Phase** where they pass through a series of loopholes and get segregated as per their size.
 * Balls then trigger the final LDR gate activating the **Tri-Vision Billboard**.It is an assembly of 3 triangular prism-shaped boxes made using MDF and L-brackets mounted on a gear each through steel shafts held in place using a Plywood base and are free to rotate about its axis. A stepper motor is coupled with a driving gear, which transmits the actuation to all the three parts of the billboard, also employing two idler gears, so that all the prisms rotate in the same direction and in phase with each other. The gears and the base have been carefully 3d printed in the Tinkering Lab. [Reference](https://www.youtube.com/watch?v=uCx9riKxTvY&feature=youtu.be) (Heavily modified from the mentioned reference).
 
-![Trivision Bill Board](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Trivision_Cad.PNG)
-
-*Trivision Bill Board*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Trivision_Cad.PNG" alt="Trivision Bill Board">
+  <i>Biped Bot</i>
+</p>
 
 * In the end, a **chain lift mechanism** lifts the balls back to level 1. The mechanism uses a 48-inch ladder chain and sprockets powered by a 12V DC motor. [Reference](https://www.youtube.com/watch?v=E2Yy66IbVuw&feature=youtu.be)
 
@@ -67,9 +74,10 @@ Arduino Uno 2560 R3 is used as the microcontroller board in each of the bots.
 
 ### Hardware Architecture of the Line Following Car
 
-![Line following car connections without LSA](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Follower_Without_LSA.jpg)
-
-*Connections without the LSA*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Follower_Without_LSA.jpg" alt="Connections without the LSA">
+  <i>Connections without the LSA</i>
+</p>
 
 ### LSA Connections to Arduino
 | LSA08 pin | Arduino Uno board |
@@ -92,9 +100,11 @@ JUNCTION WIDTH: 8
 LSA gives 1 byte output data ranging from 0-70 with 35 being the base level.
 
 ### Working Principle
-![LSA](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line.png)
 
-*LSA Sensor Logic*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line.png" alt="LSA Sensor Logic">
+  <i>LSA Sensor Logic</i>
+</p>
 
 The car remains stable and follows the straight line if Level=35.
 For Level<35 : Speed of the left motor increases such that it comes back on track by moving to the right.
@@ -110,9 +120,10 @@ Correction = kp(error) + kd(error- previous_error)
 ### Biped Bot
 A DC motor interconnected to three pulleys using bands which is responsible for the movement of a bipedal bot was driven by a motor driver which is connected to the Arduino Uno, battery, and also to HC-05 (which is used to pair Bluetooth) through a common ground. HC - 05 is also connected to the Arduino Uno through which the instructions given from the phone via Bluetooth can be transmitted to the Arduino Uno and so to the Motor Driver. The speed of the motor and direction can be controlled using the Bluetooth module.
 
-![Biped connections](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Bluetooth_Module.png)
-
-*Biped Bluetooth Module Connections*
+<p align="center">
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Bluetooth_Module.png" alt="Biped Bluetooth Module Connections">
+  <i>Biped Bluetooth Module Connections</i>
+</p>
 
 ### LED Matrix
 It is a cube matrix built using 64 Light Emitting Diodes(LEDs, blue coloured) carefully soldered, and is capable of displaying various patterns as per the code fed into it.

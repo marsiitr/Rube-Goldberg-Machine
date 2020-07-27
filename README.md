@@ -134,7 +134,7 @@ We have used the Cytron MDD10A and L298A motor drivers. MDD10A is a dual-channel
 | 48 inch Stainless Steel Ladder Chain | 1 | 1000 |
 |Other components|    | 1000  |
 
-Total Cost - 215000
+Total Cost - 21500
 
 ## Aplications
 The project succeeds in providing a visual description of a student's life.

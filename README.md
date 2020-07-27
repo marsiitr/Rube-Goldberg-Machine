@@ -1,2 +1,145 @@
-# Rube-Goldberg-Machine
-Srishti 2020
+## Rube Goldberg Machine (Srishti 2020)
+
+### Abstract
+A Rube Goldberg Machine is a contraption intentionally designed to perform a simple task in an indirect and overly complicated way. The aim of this project is to depict the life of a college student through a similar complex assembly of mechanical and electronic components linked with each other creating a metaphor between humans and machines.
+
+### Motivation
+College life may seem to be full of excitement and surprises for a layman, but little do he know of the struggles that the student had to face to reach that milestone and the difficulties that are masked by the brand college name. So our team of 5 freshers decided to cover the important moments of the journey beginning with exams to the major events of 1st year and what we think is to come next for us. We attempt to display it in a visually appealing format making use of our mechanical and electronics expertise.
+
+### Workflow
+![flow chart](images/)
+*Schematic Flow Chart of the Machine*
+
+The entire project is divided into 8 major elements depicting a distinct phase in the life of a student who are represented by spherical balls of different sizes. The Tower of Exams(Inclined Pathway) illustrates the ups and downs, successes, and failures in each of the competitive exams. The First LDR Gate represents the path to the major JEE Exam after which students seek admission to colleges through counselling and finally enter college after years of hard work. Similar to the biped bot, the students stumble here and there in the college exploring various things many of which are new to them and then comes the first major college cultural fest of their lives, THOMSO, depicted using LED Cube. The matrix laden with it’s bright colours succeeds in depicting the aura of the cult. 
+Enter the next semester, students are overwhelmed with all the groups releasing recruitment notices. This period involves a lot of stress and confusion, but it is fun nevertheless. After this stressful and dilemmatic process comes the adventurous trip which is depicted by the bridge (Lakshman Jhula,  Rishikesh). The next comes second semester’s Mid-Term Examinations and following End-Term Examinations which is well shown by the Trivision Billboard. Then we all head back to our respective hometowns for spending the summer breaks that is depicted by the Ball lifting mechanism and the journey goes on for the next and their next batch of freshers as our Rube Goldberg machine works in a loop.
+
+### Mechanical Aspect of the Design
+Rubber balls 3 of radius 2.5cm and 3 of radius 3cm each are used to denote the students.
+The following steps help one understand the journey by providing a mechanical description of every component:
+* Tower of : A vertical assembly of MDF towers inter-connected via loophole paths describes the difficult journey before getting into IIT.
+* A smooth MDF path transitions into the LDR Gate triggering the Line-following car. Running on a parallel track is another MDF platform taking each ball to the chain lift.
+* Line-follower traverses through the loop and then triggers the Biped Bot.
+* Biped bot is a working prototype of a two-legged robot built with an assembly of 3 acrylic pulleys linked with elastic bands and 6mm steel rods, propelled by using a simple DC motor. It mounts an Arduino Uno on one side used to control the motor via a motor driver.
+* Biped Bot passing through the LDR gate triggers the chain lift mechanism that lifts the balls to level 1. The mechanism uses a 48 inch ladder chain and sprockets powered by a 12V DC motor. 
+* Tri-Vision Billboard- Three Triangular prism shaped boxes made using MDF and L-brackets are mounted on a gear each through steel shafts held in place using Plywood base and are free to rotate about its axis. A stepper motor is coupled with a driving gear, which transmits the actuation to all the three parts of the billboard, also employing two idler gears, so that all the prisms rotate in the same direction and in phase with each other. The gears and the base have been carefully 3d printed in the Tinkering Lab. 
+
+![3D Printing](images/)
+
+### Electronics Aspect of the Design
+
+#### Microcontroller
+Arduino Uno 2560 R3 is used as the microcontroller board in each of the bots.
+
+#### Hardware Architecture of the Line Following Car
+
+![Line following car connections](images/)
+*Connections without the LSA*
+
+##### LSA Connections to Arduino
+| LSA08 pin | Arduino Uno board |
+|:-----:|:------------------:|
+| 1 | RX (pin 0) |
+| 2 | TX (pin 1)|
+| 3 | Digital (pin 2) |
+| 4 | 	Not Used |
+| 5 | Digital (pin 4)|
+| 6 | Not Used |
+| 7 | Not Used|
+| 8 | Not Used |
+| 9 | Vin |
+| 10 | GND |
+
+##### LSA08 Settings:
+LINEMODE: Dark-ON detecting black line in white background.
+THRESHOLD: 7
+JUNCTION WIDTH: 8
+LSA gives 1 byte output data ranging from 0-70 with 35 being the base level.
+
+##### Working Principle
+
+![LSA](images/)
+
+The car remains stable and follows the straight line if Level=35.
+For Level<35 : Speed of left motor increases such that it comes back on track by moving to the right.
+For Level>35 : Speed of right motor increases such that it comes back on track by moving to the left.
+
+##### PID
+PID is short for proportional, integral and derivative. The PID is used to correct the error of the bot while traversing.
+The correction value is given as
+
+Correction = kp(error) + kd(error- previous_error)
+
+
+#### Biped Bot
+A DC motor interconnected to three pulleys using bands which is responsible for the movement of a bipedal bot was driven by a motor driver which is connected to the Arduino Uno, battery, and also to HC-05 (which is used to pair Bluetooth) through a common ground. HC - 05 is also connected to the Arduino Uno through which the instructions given from the phone via Bluetooth can be transmitted to the Arduino Uno and so to the Motor Driver. The speed of the motor and direction can be controlled using the Bluetooth module.
+
+![Biped connections](images/)
+
+#### LED Matrix
+It is a cube matrix built using 64 Light Emitting Diodes(LEDs, blue coloured) carefully soldered, and is capable of displaying various patterns as per the code fed into it.
+
+![LED Matrix](images/)
+
+#### Trivision Billboard
+Uses a stepper motor to control the movement of the steel shafts about it’s axis controlled through the L298A motor driver.
+
+#### Chain Lift
+Uses a 12V DC Gear motor to rotate the chain vertically stabilized via sprockets.
+
+#### Motor Driver
+We have used the Cytron MDD10A which is a dual-channel version of the MDD10C. Like MD10C, MDD10A also supports locked-antiphase and sign-magnitude PWM signal.
+
+### Cost Structure
+
+| Components | Quantity | Cost (in INR) |
+|:----------------------------------:|:-------:|:------------:|
+| Auto-Calibrating Line Sensor LSA08 | 1 | 5000 |
+| Arduino Uno Rev3 | 5 | 2000 |
+| Digital LDR Module | 4 | 400 |
+| LED | 64 | 200 |
+| Cytron Dual Channel Enhanced 13Amp DC Motor Driver | 4 | 8000 |
+| LiPo Battery 11.1V | 5 | 1500 |
+| Motor Bracket | 2 | 400 |
+| DC Motor | 1 | 500 |
+| Stepper Motor | 1 | 700 |
+| HC-05 | 1 | 400 |
+| 48 inch Stainless Steel Ladder Chain | 1 | 1000 |
+|Other components|    | 1000  |
+| MDF | 5 | 400 |
+
+Total Cost - 215000
+
+### Aplications
+The project succeeds in providing a visual description of a student life.
+
+### Limitations
+* Some of the systems are not mechanically and electronically robust. For eg: The platforms used to carry the balls are hand-crafted and hence prone to obstruct the paths.
+* Although an attempt was made to automate all the things and create a loop, several phases in the project still require manual handling. For eg: We need to collect the balls sorted and collected in the group recruitment phase and place them back in the starting point.
+* Due to the Covid-19 pandemic, the actual Srishti event got cancelled. This created the most terrible impact as our team could not manufacture some of the parts like the chain lift mechanism. 
+
+### Future Improvements
+Manufacture the remaining components and make the project display-ready.
+Include several components for automating the process. A Ball-collecting bot making use of OpenCV for ball detection can be made to address this issue. It will significantly help to reduce the amount of manual work required to make the platforms.
+
+### Team Members
+- Pradnesh Chavan        https://github.com/prady39
+- Rohit Kulkarni               
+- Shruti Gour            https://github.com/ShrutiGour
+- Shubham Kumar			 https://github.com/shubhamr2701
+- Stuti Lilani           https://github.com/stuts23
+
+### Mentors
+- Kshitij Bithel
+- Tabish Madni
+- Yashutosh Bansal
+
+### References
+- [Chain Lift](https://www.youtube.com/watch?v=E2Yy66IbVuw&feature=youtu.be)
+- [Tri Vision Bill Board](https://www.youtube.com/watch?v=uCx9riKxTvY&feature=youtu.be)
+- [Bluetooth Module](https://roboindia.com/tutorials/motor-control-with-bluetooth-module-hc-05/)
+- [Line Follower Simulation](https://www.youtube.com/watch?v=vfwxKjOr-7o)
+- [Line Following Car](https://tutorial.cytron.io/2015/07/31/line-following-robot-using-lsa08-serial-mode-digital-output/)
+
+
+
+

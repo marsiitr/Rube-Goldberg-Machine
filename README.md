@@ -172,14 +172,14 @@ Correction = kp(error) + kd(error- previous_error)
 <p>Uses a 12V DC Gear motor to rotate the chain vertically stabilized via sprockets.</p>
 
 <p align="center">
-  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Chain_Lift.png" alt="Chain Lift"><br>
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Chain_Lifting.PNG" alt="Chain Lift"><br>
   <i>Chain Lift</i>
 </p>
 
 <h3>LDR Gate</h3>
 <p>A simple setup of an LDR along with an Arduino Uno board is used to trigger elements in various places throughout the loop.</p>
 <p align="center">
-  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/LDR.png" alt="LDR"><br>
+  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/LDR_Circuit%20.PNG" alt="LDR"><br>
   <i>LDR Connections</i>
 </p>
 

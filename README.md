@@ -27,7 +27,7 @@
   <i>Schematic Flow Chart of the Machine</i>
 </p>
 
-<p align="justify">
+<p align="justify"> 
   
 * The entire project is divided into 8 major elements depicting a distinct phase in the life of a student who is represented by spherical balls of different sizes. 
 
@@ -49,13 +49,15 @@
 
 <p align="justify">
   <h2>Mechanical Aspect of the Design</h2>
-  <p>Rubber balls 3 of radius 2.5 cm and 3 of radius 3 cm each are used to denote the students.<br>The following steps help one understand the journey by providing a mechanical description of every component:<br>
+  <p>Rubber balls 3 of radius 2.5 cm and 3 of radius 3 cm each are used to denote the students.<br>The following steps help one understand the journey by providing a mechanical description of every component:
+  <br>
   
 * **Tower of Exams:** A vertical assembly of MDF towers inter-connected via loophole paths describes the difficult journey before getting into IIT.
-<p align="center">
-  <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Mechanical%20Design/Inclined%20Pathway/Inclined_Pathway_Cad.png" alt="Tower of Exams"><br>
-  <i>Tower of Exams</i>
-</p>
+
+  <p align="center">
+   <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Mechanical%20Design/Inclined%20Pathway/Inclined_Pathway_Cad.png" alt="Tower of Exams"><br>
+    <i>Tower of Exams</i>
+  </p>
   
 * A smooth MDF path transitions into the LDR Gate triggering the **Line-following car**. Running on a parallel track is another MDF platform taking each ball to the chain lift.
   </p>
@@ -69,6 +71,7 @@
  * Line-follower traverses through the loop and then triggers the Biped Bot.
   
  * **Biped bot** is a working prototype of a two-legged robot built with an assembly of 3 acrylic pulleys linked with elastic bands and 6mm steel rods, propelled by using a simple DC motor. It mounts an Arduino Uno on one side used to control the motor via a motor driver.
+ 
   </p>
 
 <p align="center">
@@ -88,6 +91,7 @@
 </p>
 
 * The balls then trigger the final LDR gate activating the **Tri-Vision Billboard**.It is an assembly of 3 triangular prism-shaped boxes made using MDF and L-brackets mounted on a gear each through steel shafts held in place using a Plywood base and are free to rotate about its axis. A stepper motor is coupled with a driving gear, which transmits the actuation to all the three parts of the billboard, also employing two idler gears, so that all the prisms rotate in the same direction and in phase with each other. The gears and the base have been carefully 3d printed in the Tinkering Lab. [Reference](https://www.youtube.com/watch?v=uCx9riKxTvY&feature=youtu.be) (Heavily modified from the mentioned reference).
+
 </p>
 
 ![Trivision Bill Board](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Mechanical%20Design/Trivision%20Bill%20Board/Trivision_Cad2.png) ![Gear 3D print](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Trivision_Gears_3d_print.png)
@@ -149,7 +153,6 @@
     <h3>PID</h3>
     <p>PID is short for proportional, integral, and derivative. The PID is used to correct the error of the bot while traversing.
 The correction value is given as
-
 Correction = kp(error) + kd(error- previous_error)
 <h3>Biped Bot</h3>
 <p>A DC motor interconnected to three pulleys using bands which is responsible for the movement of a bipedal bot was driven by a motor driver which is connected to the Arduino Uno, battery, and also to HC-05 (which is used to pair Bluetooth) through a common ground. HC - 05 is also connected to the Arduino Uno through which the instructions given from the phone via Bluetooth can be transmitted to the Arduino Uno and so to the Motor Driver. The speed of the motor and direction can be controlled using the Bluetooth module.</p>
@@ -158,22 +161,28 @@ Correction = kp(error) + kd(error- previous_error)
   <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Bluetooth_Module.png" alt="Biped Bluetooth Module Connections"><br>
   <i>Biped Bluetooth Module Connections</i>
 </p>
+
 <h3>LED Matrix</h3>
 <p>It is a cube matrix built using 64 Light Emitting Diodes(LEDs, blue coloured) carefully soldered, and is capable of displaying various patterns as per the code fed into it.</p>
+
 <h3>Trivision Billboard</h3>
 <p>Uses a stepper motor to control the movement of the steel shafts about its axis controlled through the L298A motor driver.</p>
+
 <h3>Chain Lift</h3>
 <p>Uses a 12V DC Gear motor to rotate the chain vertically stabilized via sprockets.</p>
+
 <p align="center">
   <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Chain_Lift.png" alt="Chain Lift"><br>
   <i>Chain Lift</i>
 </p>
+
 <h3>LDR Gate</h3>
 <p>A simple setup of an LDR along with an Arduino Uno board is used to trigger elements in various places throughout the loop.</p>
 <p align="center">
   <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/LDR.png" alt="LDR"><br>
   <i>LDR Connections</i>
 </p>
+
 <h3>Motor Driver</h3>
 <p>We have used the Cytron MDD10A and L298A motor drivers. MDD10A is a dual-channel version of the MDD10C. Like MDD10C, MDD10A also supports locked-antiphase and sign-magnitude PWM signal.</p>
 </p>
@@ -200,9 +209,12 @@ Correction = kp(error) + kd(error- previous_error)
 |Total Cost|    | 20300  |
 
 <p align="justify">
+  
   <h2>Applications</h2>
   <p>The project succeeds in providing a visual description of a student's life.</p>
+  
   <h2>Limitations</h2>
+  
   <p>
   
 * Some of the systems are not mechanically and electronically robust. For eg: The platforms used to carry the balls are hand-crafted and hence prone to obstruct the paths.
@@ -217,8 +229,10 @@ Correction = kp(error) + kd(error- previous_error)
 * Manufacture the remaining components and make the project display-ready.
 
 * Include several components for automating the process. A Ball-collecting bot making use of OpenCV for ball detection can be made to address this issue. It will significantly help to reduce the amount of manual work required to make the platforms.
+
 </p>
 <h2>Team Members</h2>
+
 <p>
   
 * [Pradnesh Chavan](https://github.com/prady39)
@@ -237,6 +251,7 @@ Correction = kp(error) + kd(error- previous_error)
 
 </p>
 <h2>References</h2>
+
 <p>
   
 - [Chain Lift](https://www.youtube.com/watch?v=E2Yy66IbVuw&feature=youtu.be)
@@ -246,5 +261,3 @@ Correction = kp(error) + kd(error- previous_error)
 - [Line Following Car](https://tutorial.cytron.io/2015/07/31/line-following-robot-using-lsa08-serial-mode-digital-output/)
 
 </p>
-
-

@@ -94,7 +94,7 @@
 
 </p>
 
-![Trivision Bill Board](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Mechanical%20Design/Trivision%20Bill%20Board/Trivision_Cad2.png) ![Gear 3D print](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Trivision_Gears_3d_print.png)
+![Trivision Bill Board](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Mechanical%20Design/Trivision%20Bill%20Board/Trivision_Cad2.png) ![Gear 3D print](https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Gears_3D%20print.PNG)
 
 <p>
   
@@ -235,19 +235,19 @@ Correction = kp(error) + kd(error- previous_error)
 
 <p>
   
-* [Pradnesh Chavan](https://github.com/prady39)
-* [Rohit Kulkarni](https://github.com/roku01)               
-* [Shruti Gour](https://github.com/ShrutiGour)
-* [Shubham Kumar](https://github.com/shubhamr2701)
-* [Stuti Lilani](https://github.com/stuts23)
+1. [Pradnesh Chavan](https://github.com/prady39)
+2. [Rohit Kulkarni](https://github.com/roku01)               
+3. [Shruti Gour](https://github.com/ShrutiGour)
+4. [Shubham Kumar](https://github.com/shubhamr2701)
+5. [Stuti Lilani](https://github.com/stuts23)
   
 </p>
 <h2>Mentors</h2>
 <p>
   
-- [Kshitij Bithel](https://github.com/KSHITIJBITHEL)
-- Tabish Madni
-- [Yashutosh Bansal](https://github.com/yashutoshbansal)
+1. [Kshitij Bithel](https://github.com/KSHITIJBITHEL)
+2. Tabish Madni
+3. [Yashutosh Bansal](https://github.com/yashutoshbansal)
 
 </p>
 <h2>References</h2>

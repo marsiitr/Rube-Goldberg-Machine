@@ -63,7 +63,7 @@
   </p>
 
   <p align="center">
-    <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Following_Car.png" alt="Line Following Car"><br>
+    <img src="https://github.com/prady39/Rube-Goldberg-Machine/blob/master/Images%20and%20Videos/Images/Line_Follower_Car.PNG" alt="Line Following Car"><br>
     <i>Line Following Car</i>
   </p>
 
